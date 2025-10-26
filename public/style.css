@@ -1,77 +1,122 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f7f6f3;
+  background-color: #F9F5E7;
   color: #2b2b2b;
 }
 
 header {
-  display: flex;
-  height: 100px;
-  position: sticky;
-  top: 0;
-  background: #394B36FF;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-#hero {
-  height: 100vh;
-  background: url("images/matcha-hero.jpg") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: #FFF9DC;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-button {
-  background-color: #394B36FF;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  color: #FFF9DC;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background-color: #799542;
+  background: #344C34;
 }
 
 nav {
   display: flex;
-  justify-content: space-between; /* spreads items evenly */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff9dc; /* your cream color */
+  height: 100px;
+  padding: 0 2rem;
+  position: relative;
 }
 
-nav h1 {
-  font-size: 1.5rem;
-  color: #394B36FF; /* matcha green */
-  margin: 0;
-}
-
-nav ul {
+.nav-left,
+.nav-right {
   display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: 2rem;
 }
 
+/* Perfectly center logo */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Disable underline effect on the logo link */
+.nav-center a::after {
+  display: none;
+}
+
+/* Default link style (no underline) */
 nav a {
   text-decoration: none;
-  color: #394936FF;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #FDF2D0;              /* your cream color */
+  position: relative;          /* needed for hover effect below */
 }
 
-nav a:hover {
-  color: #98b45b;
+/* Add underline only when hovered */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;                /* position under text */
+  width: 0%;
+  height: 2px;
+  background-color: #FDF2D0;   /* underline color */
+  transition: width 0.3s ease;
 }
+
+/* Expand underline smoothly on hover */
+nav a:hover::after {
+  width: 100%;
+}
+
 
 .logo {
-  width: 60px;   /* adjust to your liking */
+  width: 100px; /* adjust as needed */
   height: auto;
+  transform: scale(1.45); /* perfectly centers horizontally */
+  transform-origin: center;
+}
+
+footer {
+  background-color: #344C34; /* deep matcha green */
+  color: #FDF2D0; /* cream text */
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FDF2D0;              /* your cream color */
+  position: relative;          /* needed for hover effect below */
+}
+
+#social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Instagram embed styling */
+.instagram-media {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 540px !important;
+  width: 100% !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Image styling */
+.main_photo {
+  width: 100%;             /* Adjust size */
+  height: auto;
+  margin-bottom: 2rem;    /* Space between image and Instagram post */
+  position: relative;
+  z-index: 2;             /* Keeps it on top if needed */
+}
+
+.insta-icon {
+  width: 22px;
+  height: 22px;
+  color: #FDF2D0; /* cream */
+  vertical-align: middle;
 }
