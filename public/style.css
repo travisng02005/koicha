@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f6f3;
+  color: #2b2b2b;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  background: #394B36FF;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#hero {
+  height: 100vh;
+  background: url("images/matcha-hero.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #FFF9DC;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+button {
+  background-color: #394B36FF;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #FFF9DC;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #799542;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* spreads items evenly */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff9dc; /* your cream color */
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  color: #394B36FF; /* matcha green */
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #394936FF;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #98b45b;
+}
+
+.logo {
+  width: 60px;   /* adjust to your liking */
+  height: auto;
+}
