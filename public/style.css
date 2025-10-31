@@ -1,8 +1,14 @@
-body {
+html body {
+  height: 100%;
   margin: 0;
+}
+
+body {
   font-family: "Poppins", sans-serif;
-  background-color: #F9F5E7;
+  background-color: #FDF2D0;
   color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -76,6 +82,7 @@ footer {
   padding: 1.5rem 0;
   text-align: center;
   font-size: 0.9rem;
+  margin-top: auto;
 }
 
 footer a {
@@ -112,11 +119,4 @@ footer a {
   margin-bottom: 2rem;    /* Space between image and Instagram post */
   position: relative;
   z-index: 2;             /* Keeps it on top if needed */
-}
-
-.insta-icon {
-  width: 22px;
-  height: 22px;
-  color: #FDF2D0; /* cream */
-  vertical-align: middle;
 }
